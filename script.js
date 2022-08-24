@@ -1,4 +1,14 @@
 let result = '0';
+let numberOne = 0;
+let numberTwo = 0;
+let check = 'nothing'
+// check - переменная для того, чтобы понять, складываем мы или уничтожаем, 
+// делим или умножаем
+// check = nothing - ничего не делать
+// check = *
+// check = +
+// check = /
+// check = -
 
 function c() {
     result = '0';
@@ -8,7 +18,6 @@ function c() {
 function del() {
     // if - если, else - иначе
     if (result.length > 1) {
-        console.log(result.length);
         result = result.slice(0, -1); // удаление элемента с конца
         document.getElementById('total').innerHTML = result;
     }
@@ -16,6 +25,48 @@ function del() {
         result = '0';
         document.getElementById('total').innerHTML = result;
     }
+}
+
+function plus() {
+    // parseInt - метод JS для перевода строки в число (integer)
+    numberOne = parseInt(result);
+    result = '0';
+    check = '+';
+    document.getElementById('total').innerHTML = result;
+}
+
+function minus() {
+    // parseInt - метод JS для перевода строки в число (integer)
+    numberOne = parseInt(result);
+    result = '0';
+    check = '-';
+    document.getElementById('total').innerHTML = result;
+}
+
+function miltuply() {
+    // parseInt - метод JS для перевода строки в число (integer)
+    numberOne = parseInt(result);
+    result = '0';
+    check = '*';
+    document.getElementById('total').innerHTML = result;
+}
+
+
+function equality() {
+    if (numberOne != 0 && check == "+") {
+        numberTwo = parseInt(result);
+        result = numberOne + numberTwo;
+        document.getElementById('total').innerHTML = result;
+        check = 'noting';
+    }
+
+    if (numberOne != 0 && check == "*") {
+        numberTwo = parseInt(result);
+        result = numberOne * numberTwo;
+        document.getElementById('total').innerHTML = result;
+        check = 'noting';
+    }
+
 }
 
 function zero() {
@@ -134,4 +185,3 @@ function nine() {
 
     } 
 }
-
