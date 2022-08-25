@@ -12,6 +12,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    font-size: 100px;
 }
 
 .calc {
@@ -28,9 +29,9 @@ h1 {
 	cursor:pointer;
 	color:#030303;
 	font-family:Arial;
-	font-size:22px;
+	font-size:50px;
 	font-weight:bold;
-	padding:11px 23px;
+	padding:40px 50px;
 	text-decoration:none;
 }
 .myButton:hover {
