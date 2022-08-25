@@ -28,47 +28,94 @@ function del() {
 }
 
 function plus() {
-    // parseInt - метод JS для перевода строки в число (integer)
-    numberOne = parseInt(result);
+    // parseFloat - метод JS для перевода строки в число (integer)
+    numberOne = parseFloat(result);
     result = '0';
     check = '+';
     document.getElementById('total').innerHTML = result;
 }
 
 function minus() {
-    // parseInt - метод JS для перевода строки в число (integer)
-    numberOne = parseInt(result);
+    // parseFloat - метод JS для перевода строки в число (integer)
+    numberOne = parseFloat(result);
     result = '0';
     check = '-';
     document.getElementById('total').innerHTML = result;
 }
 
 function miltuply() {
-    // parseInt - метод JS для перевода строки в число (integer)
-    numberOne = parseInt(result);
+    // parseFloat - метод JS для перевода строки в ЦЕЛОЕ число (integer)
+    // parseFloat - перевод в число с плавающей точкой
+    numberOne = parseFloat(result);
     result = '0';
     check = '*';
     document.getElementById('total').innerHTML = result;
 }
 
+function divide() {
+    // parseFloat - метод JS для перевода строки в число (integer)
+    numberOne = parseFloat(result);
+    result = '0';
+    check = '/';
+    document.getElementById('total').innerHTML = result;
+}
+
+function pi() {
+    result = '3.1415926535';
+    document.getElementById('total').innerHTML = result;
+}
+
+function degree() {
+    // parseFloat - метод JS для перевода строки в число (integer)
+    numberOne = parseFloat(result);
+    result = '0';
+    check = '^';
+    document.getElementById('total').innerHTML = result;
+}
 
 function equality() {
     if (numberOne != 0 && check == "+") {
-        numberTwo = parseInt(result);
+        numberTwo = parseFloat(result);
         result = numberOne + numberTwo;
         document.getElementById('total').innerHTML = result;
         check = 'noting';
     }
 
     if (numberOne != 0 && check == "*") {
-        numberTwo = parseInt(result);
+        numberTwo = parseFloat(result);
         result = numberOne * numberTwo;
         document.getElementById('total').innerHTML = result;
         check = 'noting';
     }
 
-}
+    if (numberOne != 0 && check == "-") {
+        numberTwo = parseFloat(result);
+        result = numberOne - numberTwo;
+        document.getElementById('total').innerHTML = result;
+        check = 'noting';
+    }    
 
+    if (numberOne != 0 && check == "/") {
+        numberTwo = parseFloat(result);
+        result = numberOne / numberTwo;
+        document.getElementById('total').innerHTML = result;
+        check = 'noting';
+    }    
+
+    if (numberOne != 0 && check == "^") {
+        numberTwo = parseFloat(result);
+        result = numberOne ** numberTwo;
+        document.getElementById('total').innerHTML = result;
+        check = 'noting';
+    }    
+}
+    if (numberOne != 0 && check == "^") {
+    numberTwo = parseFloat(result);
+    result = numberOne ** numberTwo;
+    document.getElementById('total').innerHTML = result;
+    check = 'noting';
+}    
+}
 function zero() {
     if (result.charAt(0) == '0') {
     }
