@@ -66,11 +66,18 @@ function pi() {
 }
 
 function degree() {
-    // parseFloat - метод JS для перевода строки в число (integer)
     numberOne = parseFloat(result);
     result = '0';
     check = '^';
     document.getElementById('total').innerHTML = result;
+}
+
+function percent() {
+    // parseFloat - метод JS для перевода строки в число (integer)
+    numberOne = parseFloat(result);
+    result = '0';
+    check = '%';
+    document.getElementById('total').innerHTML = result;    
 }
 
 function equality() {
@@ -108,13 +115,14 @@ function equality() {
         document.getElementById('total').innerHTML = result;
         check = 'noting';
     }    
+    if (numberOne != 0 && check == "%") {
+        numberTwo = parseFloat(result);
+        result = numberOne / (numberTwo/100);
+        console.log(result);
+        document.getElementById('total').innerHTML = result + '%';
+        check = 'noting';
+    }
 }
-    if (numberOne != 0 && check == "^") {
-    numberTwo = parseFloat(result);
-    result = numberOne ** numberTwo;
-    document.getElementById('total').innerHTML = result;
-    check = 'noting';
-}    
 
 function zero() {
     if (result.charAt(0) == '0') {
