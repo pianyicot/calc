@@ -115,7 +115,7 @@ function equality() {
     document.getElementById('total').innerHTML = result;
     check = 'noting';
 }    
-}
+
 function zero() {
     if (result.charAt(0) == '0') {
     }
